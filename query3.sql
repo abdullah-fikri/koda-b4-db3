@@ -16,3 +16,11 @@ JOIN movies_directors ON director_id = directors.id
 GROUP BY id
 ORDER BY paling_produktif DESC
 LIMIT 1
+
+
+SELECT year, COUNT(year) AS tahun_tersibuk
+FROM movies 
+GROUP BY year
+ORDER BY tahun_tersibuk DESC
+LIMIT 1
+
