@@ -24,3 +24,9 @@ GROUP BY year
 ORDER BY tahun_tersibuk DESC
 LIMIT 1
 
+
+SELECT name, string_agg(genre, ', ') AS movies_genres
+FROM movies 
+JOIN movies_genres ON movies_genres.movie_id = movies.id
+GROUP BY movies.name
+ORDER BY movies.name;
